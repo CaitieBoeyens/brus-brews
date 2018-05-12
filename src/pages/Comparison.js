@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./App.css";
+import "../App.scss";
 
-class App extends Component {
+class Comparison extends Component {
 	render() {
 		return (
 			<div className="App">
@@ -11,4 +11,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default Comparison;

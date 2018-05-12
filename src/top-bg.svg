@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg4659"
+   version="1.1"
+   viewBox="0 0 450.78864 563.3645"
+   height="563.3645mm"
+   width="450.78864mm">
+  <defs
+     id="defs4653" />
+  <metadata
+     id="metadata4656">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(133.92408,166.11082)"
+     id="layer1">
+    <g
+       id="g3744"
+       transform="matrix(0.35277777,0,0,-0.35277777,316.86456,-42.545113)">
+      <path
+         d="m 0,0 -50.326,50.326 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -4 l -56.5,56.5 -56.5,-56.5 h -1 v -130 H 0 Z"
+         style="fill:#f3eeca;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path3746" />
+    </g>
+    <g
+       id="g3748"
+       transform="matrix(0.35277777,0,0,-0.35277777,316.86456,331.46063)">
+      <path
+         d="m 0,0 h -1277.326 v -130 h 1 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 56.5,56.5 h 4 l 56.5,-56.5 L 0,-136.674 Z"
+         style="fill:#f3eeca;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path3750" />
+    </g>
+    <path
+       d="M 316.86454,-13.556063 H -133.92408 V 359.33004 h 450.78862 z"
+       style="fill:#f3eeca;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277775"
+       id="path3752" />
+    <path
+       d="m 316.86454,-166.11082 h -450.78862 v 372.8861 h 450.78862 z"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277775"
+       id="path3752-9" />
+  </g>
+</svg>
