@@ -1,1 +1,15 @@
 @import 'bulma/bulma';
+@import './variables.scss';
+.welcome-con {
+	padding: 0;
+	background-color: $yellow;
+}
+
+.welcome {
+	background-image: url(../top-bg.svg);
+	background-size: 100%;
+}
+
+.logo {
+	padding: 1em 0 0 0;
+}
