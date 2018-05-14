@@ -5,7 +5,7 @@ class Notes extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1> hello </h1>{" "}
+				<h1>Notes</h1>
 			</div>
 		);
 	}

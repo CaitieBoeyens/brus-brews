@@ -3,13 +3,32 @@
 .welcome-con {
 	padding: 0;
 	background-color: $yellow;
+	padding-bottom: 5em;
 }
 
 .welcome {
-	background-image: url(../top-bg.svg);
+	background-image: url(../assets/top-bg.svg);
 	background-size: 100%;
+	padding-bottom: 10em;
 }
 
 .logo {
 	padding: 1em 0 0 0;
+}
+
+.links {
+	border: 4px solid black;
+	border-radius: 20px;
+	margin: 20px;
+	padding-bottom: 0;
+	height: 180px;
+	margin-top: 3em;
+}
+
+.links svg {
+	height: 100px;
+}
+
+.links h4 {
+	padding-top: 1em;
 }
