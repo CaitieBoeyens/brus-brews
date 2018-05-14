@@ -11,12 +11,27 @@ h1 {
 	color: black;
 }
 
+h2 {
+	font-family: 'Lilita One', sans-serif;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	color: black;
+}
+
 h4 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	color: black;
 }
 
+h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 0.6em;
+	color: black;
+}
+
 p {
 	font-family: 'Open Sans', sans-serif;
+	text-transform: none;
 }

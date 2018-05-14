@@ -43,11 +43,28 @@ class HomeHistory extends Component {
 		};
 	}
 	render() {
+		let yearOfBeer = this.state.beers.find(beer => beer.year === 2010);
 		return (
 			<section className="history-con">
 				<div className="container history">
 					<div className="columns is-centered">
-						<div className="column is-one third" />
+						<div className="heading box column is-12 has-text-centered">
+							<h2>History of Bru's Brew</h2>
+							<p>Here's a bit of background on Bru's Brew</p>
+						</div>
+					</div>
+					<div className="columns is-centered">
+						<div className="column box is-four-fifths has-text-centered">
+							<p>graph</p>
+						</div>
+						<div className="column is-one-fifth has-text-centered">
+							<div className="box">
+								<h4>{yearOfBeer.numBeers}</h4>
+								<h6>number of beers made in 2010</h6>
+							</div>
+							<div className="box" />
+							<div className="box" />
+						</div>
 					</div>
 				</div>
 			</section>
@@ -57,15 +74,15 @@ class HomeHistory extends Component {
 		this._updateNumBeers(2010, await this._getMatchingBeers(2010));
 	}
 
-	_updateNumBeers(year, numBeers) {
+	_updateNumBeers(year, matchingBeers) {
 		const beers = [...this.state.beers];
 
 		beers.forEach(beer => {
 			if (beer.year === year) {
-				beer.numBeers = numBeers;
+				beer.numBeers = matchingBeers.length;
 			}
 		});
-
+		debugger;
 		this.setState({ beers: beers });
 	}
 	async _getMatchingBeers(year) {
