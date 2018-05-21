@@ -2,6 +2,7 @@
 $yellow: #f0a917ff;
 $blue:#80be95ff;
 $blue-grey:#2e2626ff;
+$cream:#f3eecaff;
 /* TYPE */
 
 h1 {
@@ -13,7 +14,7 @@ h1 {
 
 h2 {
 	font-family: 'Lilita One', sans-serif;
-	font-size: 2.5em;
+	font-size: 2.75em;
 	text-transform: uppercase;
 	color: black;
 }
@@ -27,11 +28,19 @@ h4 {
 h6 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	font-size: 0.6em;
+	font-size: 0.7em;
 	color: black;
 }
 
 p {
 	font-family: 'Open Sans', sans-serif;
 	text-transform: none;
+	color: black;
+}
+
+.block {
+	background-color: $cream;
+	border-radius: 7px;
+	width: 100%;
+	padding: 1em;
 }
