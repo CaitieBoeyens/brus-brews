@@ -110,14 +110,14 @@ class YeastvsABV extends Component {
 	}
 	componentWillMount() {
 		this.state.Yeasts.forEach(async yeast => {
-			this._updateNumBeersByYeast(
+			this._updateAverageABV(
 				yeast.code,
 				await this._getMatchingBeersByYeast(yeast.code)
 			);
 		});
 	}
 
-	_updateNumBeersByYeast(code, matchingBeers) {
+	_updateAverageABV(code, matchingBeers) {
 		const Yeasts = [...this.state.Yeasts];
 
 		Yeasts.forEach(beer => {

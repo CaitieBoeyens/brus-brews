@@ -8,37 +8,61 @@ class HopsBubbles extends Component {
 		this.state = {
 			Hops: [
 				{
-					name: "Pilsen Lager",
+					name: "Fuggles",
 					numUsed: 0,
 					averageABV: 0,
 					averageIBU: 0
 				},
 				{
-					name: "Pilsen Lager",
+					name: "Cascade",
 					numUsed: 0,
 					averageABV: 0,
 					averageIBU: 0
 				},
 				{
-					name: "Pilsen Lager",
+					name: "Columbus",
 					numUsed: 0,
 					averageABV: 0,
 					averageIBU: 0
 				},
 				{
-					name: "Pilsen Lager",
+					name: "Centennial",
 					numUsed: 0,
 					averageABV: 0,
 					averageIBU: 0
 				},
 				{
-					name: "Pilsen Lager",
+					name: "Simcoe",
 					numUsed: 0,
 					averageABV: 0,
 					averageIBU: 0
 				},
 				{
-					name: "Pilsen Lager",
+					name: "Amarillo",
+					numUsed: 0,
+					averageABV: 0,
+					averageIBU: 0
+				},
+				{
+					name: "Chinook",
+					numUsed: 0,
+					averageABV: 0,
+					averageIBU: 0
+				},
+				{
+					name: "Citra",
+					numUsed: 0,
+					averageABV: 0,
+					averageIBU: 0
+				},
+				{
+					name: "Ahtanum",
+					numUsed: 0,
+					averageABV: 0,
+					averageIBU: 0
+				},
+				{
+					name: "Crystal",
 					numUsed: 0,
 					averageABV: 0,
 					averageIBU: 0
@@ -50,10 +74,36 @@ class HopsBubbles extends Component {
 		return (
 			<Bubble
 				data={{
-					labels: this.state.Yeasts.map(y => y.name),
 					datasets: [
 						{
-							data: this.state.Yeasts.map(y => y.averageABV),
+							label: this.state.Hops[0].name,
+							data: [
+								{
+									x: this.state.Hops[0].averageABV,
+									y: this.state.Hops[0].averageIBU,
+									r: this.state.Hops[0].numUsed
+								}
+							],
+							backgroundColor: [
+								"#F43729",
+								"#c8f2e5",
+								"#7DC193",
+								"#F3A715",
+								"#221A1C",
+								"#aaaaaa"
+							],
+							borderColor: "black",
+							borderWidth: 5
+						},
+						{
+							label: this.state.Hops[1].name,
+							data: [
+								{
+									x: this.state.Hops[1].averageABV,
+									y: this.state.Hops[1].averageIBU,
+									r: this.state.Hops[1].numUsed
+								}
+							],
 							backgroundColor: [
 								"#F43729",
 								"#c8f2e5",
@@ -93,7 +143,7 @@ class HopsBubbles extends Component {
 							{
 								scaleLabel: {
 									display: true,
-									labelString: "Yeasts"
+									labelString: "Average alcohol content in %"
 								}
 							}
 						],
@@ -102,7 +152,7 @@ class HopsBubbles extends Component {
 							{
 								scaleLabel: {
 									display: true,
-									labelString: "Average alcohol content in %"
+									labelString: "Average bitterness"
 								},
 								ticks: {
 									beginAtZero: true
@@ -115,36 +165,42 @@ class HopsBubbles extends Component {
 		);
 	}
 	componentWillMount() {
-		this.state.Yeasts.forEach(async yeast => {
-			this._updateNumBeersByHops(
-				yeast.code,
-				await this._getMatchingBeersByHops(yeast.code)
+		this.state.Hops.forEach(async hops => {
+			this._updateValues(
+				hops.name,
+				await this._getMatchingBeersByHops(hops.name)
 			);
 		});
 	}
 
-	_updateNumBeersByHops(code, matchingBeers) {
-		const Yeasts = [...this.state.Yeasts];
+	_updateValues(name, matchingBeers) {
+		const Hops = [...this.state.Hops];
 
-		Yeasts.forEach(beer => {
-			if (beer.code === code) {
+		Hops.forEach(beer => {
+			if (beer.name === name) {
 				let averageABV =
 					matchingBeers.map(m => m.abv).reduce(function(acc, val) {
 						return acc + val;
 					}) / matchingBeers.length;
-				averageABV = averageABV.toFixed(2);
+				averageABV = averageABV.toFixed(2) / 1;
 				beer.averageABV = averageABV;
+				let averageIBU =
+					matchingBeers.map(m => m.ibu).reduce(function(acc, val) {
+						return acc + val;
+					}) / matchingBeers.length;
+				averageIBU = averageIBU.toFixed(2) / 1;
+				beer.averageIBU = averageIBU;
+				beer.numUsed = matchingBeers.length;
 			}
 		});
-
-		this.setState({ Yeasts: Yeasts });
+		this.setState({ Hops: Hops });
 	}
-	async _getMatchingBeersByHops(code) {
+	async _getMatchingBeersByHops(name) {
 		const result = await axios({
 			method: "get",
 			url: `https://api.punkapi.com/v2/beers`,
 			params: {
-				yeast: `${code}`
+				hops: `${name}`
 			}
 		});
 
