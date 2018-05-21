@@ -3,7 +3,6 @@
 .welcome-con {
 	padding: 0;
 	background-color: $yellow;
-	padding-bottom: 5em;
 }
 
 .welcome {
@@ -35,6 +34,7 @@
 
 .history-con {
 	background-color: $blue;
+	padding: 2em 0;
 }
 
 .heading {
@@ -43,4 +43,9 @@
 
 .heading p {
 	font-size: 1.5em;
+}
+
+.types-con {
+	background-color: $grey;
+	padding: 2em 0;
 }
