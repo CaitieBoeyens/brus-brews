@@ -1,0 +1,14 @@
+@import 'bulma/bulma';
+@import './variables.scss';
+.comparison {
+	background-color: $yellow;
+	min-height: 100vh;
+}
+
+.filters {
+	margin-top: 4em;
+}
+
+.brew-btn {
+	margin-top: 2em;
+}

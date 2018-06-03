@@ -1,0 +1,25 @@
+$input-border-color: #00000000;
+$input-hover-border-color: #00000000;
+@import 'bulma/bulma';
+@import './variables.scss';
+.navigation {
+	background-color: $cream;
+}
+
+.nav-logo {
+	width: 15%;
+	margin-right: 20px;
+}
+
+.nav-logo svg {
+	width: 100%;
+}
+
+.heading {
+	padding: 5em 0;
+	margin-top: 2em;
+}
+
+.heading p {
+	font-size: 1.5em;
+}
