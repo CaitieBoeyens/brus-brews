@@ -8,7 +8,7 @@
 .welcome {
 	background-image: url(../assets/top-bg.svg);
 	background-size: 100%;
-	padding-bottom: 10em;
+	padding-bottom: 20em;
 }
 
 .logo {
@@ -48,4 +48,13 @@
 .types-con {
 	background-color: $grey;
 	padding: 2em 0;
+}
+
+.types-charts {
+	height: 60vh
+}
+
+.hops-con {
+	background: $blue;
+	padding-bottom: 5em;
 }

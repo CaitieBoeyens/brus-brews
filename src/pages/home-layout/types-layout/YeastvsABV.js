@@ -1,13 +1,16 @@
-import React, { Component } from "react";
+import React, {
+	Component
+} from "react";
 import axios from "axios";
-import { Bar } from "react-chartjs-2";
+import {
+	Bar
+} from "react-chartjs-2";
 
 class YeastvsABV extends Component {
 	constructor() {
 		super();
 		this.state = {
-			Yeasts: [
-				{
+			Yeasts: [{
 					name: "Pilsen Lager",
 					code: "2007",
 					averageABV: 0
@@ -41,28 +44,27 @@ class YeastvsABV extends Component {
 		};
 	}
 	render() {
-		return (
-			<Bar
-				data={{
+		return ( <
+			Bar data = {
+				{
 					labels: this.state.Yeasts.map(y => y.name),
-					datasets: [
-						{
-							data: this.state.Yeasts.map(y => y.averageABV),
-							backgroundColor: [
-								"#F43729",
-								"#c8f2e5",
-								"#7DC193",
-								"#F3A715",
-								"#221A1C",
-								"#aaaaaa"
-							],
-							borderColor: "black",
-							borderWidth: 5
-						}
-					]
-				}}
-				height={100}
-				options={{
+					datasets: [{
+						data: this.state.Yeasts.map(y => y.averageABV),
+						backgroundColor: [
+							"#F43729",
+							"#c8f2e5",
+							"#7DC193",
+							"#F3A715",
+							"#221A1C",
+							"#aaaaaa"
+						],
+						borderColor: "black",
+						borderWidth: 5
+					}]
+				}
+			}
+			options = {
+				{
 					title: {
 						display: true,
 						text: "Alcohol Content Based on Yeast Used",
@@ -71,6 +73,10 @@ class YeastvsABV extends Component {
 						fontColor: "black",
 						padding: 40
 					},
+
+					responsive: true,
+					maintainAspectRatio: false,
+
 					layout: {
 						padding: {
 							left: 0,
@@ -83,28 +89,25 @@ class YeastvsABV extends Component {
 						display: false
 					},
 					scales: {
-						xAxes: [
-							{
-								scaleLabel: {
-									display: true,
-									labelString: "Yeasts"
-								}
+						xAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: "Yeasts"
 							}
-						],
+						}],
 
-						yAxes: [
-							{
-								scaleLabel: {
-									display: true,
-									labelString: "Average alcohol content in %"
-								},
-								ticks: {
-									beginAtZero: true
-								}
+						yAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: "Average alcohol content in %"
+							},
+							ticks: {
+								beginAtZero: true
 							}
-						]
+						}]
 					}
-				}}
+				}
+			}
 			/>
 		);
 	}
@@ -123,7 +126,7 @@ class YeastvsABV extends Component {
 		Yeasts.forEach(beer => {
 			if (beer.code === code) {
 				let averageABV =
-					matchingBeers.map(m => m.abv).reduce(function(acc, val) {
+					matchingBeers.map(m => m.abv).reduce(function (acc, val) {
 						return acc + val;
 					}) / matchingBeers.length;
 				averageABV = averageABV.toFixed(2);
@@ -131,7 +134,9 @@ class YeastvsABV extends Component {
 			}
 		});
 
-		this.setState({ Yeasts: Yeasts });
+		this.setState({
+			Yeasts: Yeasts
+		});
 	}
 	async _getMatchingBeersByYeast(code) {
 		const result = await axios({

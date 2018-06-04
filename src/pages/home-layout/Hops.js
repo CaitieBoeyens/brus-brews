@@ -5,7 +5,7 @@ import HopsBubbles from "./hops-layout/HopsBubbles";
 class HomeHops extends Component {
   render() {
     return (
-      <section className="types-con">
+      <section className="hops-con">
         <div className="container types">
           <div className="columns is-centered">
             <div className="column is-12 has-text-centered">

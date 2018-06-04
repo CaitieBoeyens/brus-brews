@@ -7,14 +7,28 @@ class Note extends Component {
   }
   markupNotes() {
     let notes = this.props.notes;
-    console.log(notes);
     return notes.map(note => {
       return (
-        <div className="box block">
-          <p>
-            <strong>{note.user}</strong>
-          </p>
-          <p>{note.message}</p>
+        <div key={note.user} className="box block">
+          <article className="media">
+            <figure className="media-left">
+              <p className="image is-64x64">
+                <img
+                  alt="icon"
+                  src="https://bulma.io/images/placeholders/128x128.png"
+                />
+              </p>
+            </figure>
+            <div className="media-content">
+              <div className="content">
+                <p>
+                  <strong>{note.user}</strong>
+                  <br />
+                  {note.message}
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
       );
     });
