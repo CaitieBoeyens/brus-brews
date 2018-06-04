@@ -35,8 +35,7 @@ class Comparison extends Component {
           EBC: 0
         }
       ],
-      selectedOption: "all",
-      beerNames: []
+      selectedOption: "all"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -106,20 +105,6 @@ class Comparison extends Component {
     this.setState({ beers: updatedBeers });
   }
 
-  async componentWillMount() {
-    await this._getBeerNames();
-  }
-
-  async _getBeerNames() {
-    const result = await axios({
-      method: "get",
-      url: `https://api.punkapi.com/v2/beers`
-    });
-
-    const beerNames = result.data.map(d => d.name);
-    this.setState({ beerNames: beerNames });
-  }
-
   displayGraph() {
     if (this.state.selectedOption === "all") {
       return (
@@ -156,7 +141,6 @@ class Comparison extends Component {
                   handleChange={this.handleChange}
                   handleSubmit={this.handleSubmit}
                   beers={this.state.beers}
-                  beerNames={this.state.beerNames}
                   selectedOption={this.state.selectedOption}
                 />
                 {/* block */}
